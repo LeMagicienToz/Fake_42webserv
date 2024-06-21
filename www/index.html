@@ -1,0 +1,37 @@
+<!-- pour lancer le site utiliser la commande: -->
+<!-- python3 -m http.server -->
+<!-- puis se connecter a http://localhost:8000/ -->
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Les fruits rouges</title>
+	</head>
+	<body>
+		<h1>Voici une liste de fruits rouges:</h1>
+		<ul>
+			<li><a href="fraise.html">Les fraises</a></li>
+			<li><a href="framboise.html">Les framboises</a></li>
+			<li><a href="cerise.html">Les cerises</a></li>
+			<li><a href="groseille.html">Les groseilles</a></li> <!-- pour faire erreur 404 -->
+		</ul>
+		<hr>
+		<form action="/submit" method="post"> <!-- ici utilise la methode post pour envoyer au site sur /submit -->
+
+			<label for="login">Login :</label>
+			<input type="login" id="login" name="login" required><br><br>
+
+			<label for="pwd">Password :</label>
+			<input type="password" id="pwd" name="password" required><br><br>
+
+			<input type="submit" value="Envoyer">
+		</form>
+		<hr>
+		<form action="/upload" method="post" enctype="multipart/form-data"> <!-- formulaire pour uploader un fichier -->
+			<label for="file">Uploader un fichier :</label>
+			<input type="file" id="file" name="file" required><br><br>
+			<input type="submit" value="Uploader">
+		</form>
+	</body>
+</html>
